@@ -3,6 +3,12 @@ body {
     margin:0;
     overflow:hidden;
     padding:0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
   }
   
   .screen {
@@ -81,3 +87,14 @@ body {
       opacity:0;
     }
   }
+
+  /* Ingrandisce e centra il div del conto alla rovescia */
+#countdownDiv {
+  font-size: 3rem;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centra il testo all'interno del div */
+}
