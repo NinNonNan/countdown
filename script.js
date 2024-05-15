@@ -1,12 +1,24 @@
 function countdown(targetTime, targetDivId) {
     var targetDiv = document.getElementById(targetDivId);
     
+    // Creazione di elementi per la stringa di testo e per l'ora del conto alla rovescia
+    var textElement = document.createElement('div');
+    var timeElement = document.createElement('div');
+    
+    // Aggiunta delle classi CSS ai nuovi elementi
+    textElement.classList.add('countdown-text');
+    timeElement.classList.add('countdown-time');
+    
+    // Aggiunta dei nuovi elementi al div del conto alla rovescia
+    targetDiv.appendChild(textElement);
+    targetDiv.appendChild(timeElement);
+    
     function updateCountdown() {
         var currentTime = new Date();
         var difference = targetTime.getTime() - currentTime.getTime();
 
         if (difference <= 0) {
-            targetDiv.innerHTML = "Tempo scaduto";
+            timeElement.innerHTML = "Tempo scaduto";
             clearInterval(interval);
             return;
         }
@@ -19,7 +31,10 @@ function countdown(targetTime, targetDivId) {
                             minutes.toString().padStart(2, '0') + ":" +
                             seconds.toString().padStart(2, '0');
 
-        targetDiv.innerHTML = formattedTime;
+        timeElement.innerHTML = formattedTime;
+
+        // Aggiorna il titolo della pagina con l'ora del conto alla rovescia
+        document.title = formattedTime;
     }
 
     var interval = setInterval(updateCountdown, 1000);
