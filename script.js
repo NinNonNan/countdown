@@ -34,7 +34,7 @@ function countdown(targetTime, targetDivId) {
         timeElement.innerHTML = formattedTime;
 
         // Aggiorna il titolo della pagina con l'ora del conto alla rovescia
-        document.title = formattedTime;
+        document.title = "La live comincia tra: " + formattedTime;
     }
 
     var interval = setInterval(updateCountdown, 1000);
