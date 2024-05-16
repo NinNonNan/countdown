@@ -50,6 +50,11 @@ window.onload = function() {
             var targetTime = new Date(settings.year, settings.month - 1, settings.day, settings.hour, settings.minute, settings.second);
             // Chiama la funzione countdown con l'orario di destinazione e l'ID del div
             countdown(targetTime, 'countdownDiv');
+
+            // Imposta il titolo della pagina e il messaggio di scadenza basati sulle variabili ottenute dal file JSON
+            document.title = settings.title;
+            timeElement.innerHTML = settings.msg;
         })
         .catch(error => console.error('Errore nel recupero delle impostazioni:', error));
 };
+
