@@ -90,8 +90,8 @@ body {
 
   /* Ingrandisce e centra il div del conto alla rovescia */
   #countdownDiv {
-    width: 90%;
-    font-size: 25rem;
+    /* font-size: 25rem; */
+    font-size: calc(10vw + 10vh);
     color: #333;
     background-color: #fff;
     padding: 20px;
