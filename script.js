@@ -43,7 +43,7 @@ function countdown(targetTime, targetDivId) {
 
 window.onload = function() {
     // Effettua una richiesta HTTP per recuperare le impostazioni dall'esterno
-    fetch('js/settings.json')
+    fetch('settings.json')
         .then(response => response.json())
         .then(settings => {
             // Crea una nuova data basata sulle impostazioni ottenute dal file JSON
