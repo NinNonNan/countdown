@@ -3,6 +3,12 @@ function countdown(targetTime, targetDivId, title, msg) {
     
     // Iniezione dinamica di CSS per rendere il layout responsive
     if (!document.getElementById('countdown-style')) {
+        // Caricamento del font Share Tech Mono da Google Fonts
+        const fontLink = document.createElement('link');
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap';
+        fontLink.rel = 'stylesheet';
+        document.head.appendChild(fontLink);
+
         const style = document.createElement('style');
         style.id = 'countdown-style';
         style.textContent = `
@@ -15,7 +21,7 @@ function countdown(targetTime, targetDivId, title, msg) {
                 width: 100%;
                 padding: 20px;
                 box-sizing: border-box;
-                font-family: sans-serif;
+                font-family: 'Share Tech Mono', monospace;
             }
             .countdown-text {
                 font-size: clamp(1.5rem, 5vw, 3rem);
