@@ -79,6 +79,19 @@ window.onload = function() {
     fetch('settings.json')
         .then(response => response.json())
         .then(settings => {
+            // Gestione parametri URL per override delle impostazioni JSON
+            // Esempio: index.html?day=25&month=12&title=Natale
+            const urlParams = new URLSearchParams(window.location.search);
+
+            if (urlParams.has('year')) settings.year = parseInt(urlParams.get('year'));
+            if (urlParams.has('month')) settings.month = parseInt(urlParams.get('month'));
+            if (urlParams.has('day')) settings.day = parseInt(urlParams.get('day'));
+            if (urlParams.has('hour')) settings.hour = parseInt(urlParams.get('hour'));
+            if (urlParams.has('minute')) settings.minute = parseInt(urlParams.get('minute'));
+            if (urlParams.has('second')) settings.second = parseInt(urlParams.get('second'));
+            if (urlParams.has('title')) settings.title = urlParams.get('title');
+            if (urlParams.has('msg')) settings.msg = urlParams.get('msg');
+
             // Crea una nuova data basata sulle impostazioni ottenute dal file JSON
             const targetTime = new Date(settings.year, settings.month - 1, settings.day, settings.hour, settings.minute, settings.second);
             // Chiama la funzione countdown con l'orario di destinazione, l'ID del div, il titolo e il messaggio

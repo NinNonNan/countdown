@@ -25,3 +25,8 @@ This project is a lightweight and configurable web widget that displays a countd
 4.  **User Feedback**:
     *   **Page Title**: The `document.title` (browser tab text) updates every second with the remaining time, allowing the user to monitor the countdown even when switching tabs.
     *   **Event End**: When time runs out, the timer stops automatically, and the "end" message configured in the JSON is displayed.
+
+5.  **Quick Setup via URL**:
+    *   You can override JSON settings by passing parameters directly in the URL.
+    *   Example: `index.html?day=31&month=12&hour=23&minute=59&title=NewYear`
+    *   Supported parameters: `year`, `month`, `day`, `hour`, `minute`, `second`, `title`, `msg`.

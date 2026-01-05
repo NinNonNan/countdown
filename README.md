@@ -25,3 +25,8 @@ Questo progetto è un widget web leggero e configurabile che visualizza un conto
 4.  **Feedback Utente**:
     *   **Titolo Pagina**: Il `document.title` (la scritta nella scheda del browser) si aggiorna ogni secondo con il tempo rimanente, permettendo all'utente di monitorare il countdown anche cambiando scheda.
     *   **Fine Evento**: Allo scadere del tempo, il timer si ferma automaticamente e viene mostrato il messaggio di "fine" configurato nel JSON.
+
+5.  **Configurazione Rapida via URL**:
+    *   È possibile sovrascrivere le impostazioni del file JSON passando parametri direttamente nell'URL.
+    *   Esempio: `index.html?day=31&month=12&hour=23&minute=59&title=Capodanno`
+    *   Parametri supportati: `year`, `month`, `day`, `hour`, `minute`, `second`, `title`, `msg`.
