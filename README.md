@@ -2,7 +2,7 @@
 
 [Read in English 🇬🇧](README.en.md)
 
-<a href="https://ninonononano.github.io/countdown/" target="_blank">Vai al conto alla rovescia (Demo)</a>
+<a href="https://ninnonnan.github.io/countdown/" target="_blank">Vai al conto alla rovescia (Demo)</a>
 
 ### Descrizione del Progetto
 
